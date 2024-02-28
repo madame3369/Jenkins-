@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: jenkins
-          image: jenkins/jenkins:lts
+          image: docker.io/akeka0303/jenkins
           ports:
             - name: http-port
               containerPort: 8080

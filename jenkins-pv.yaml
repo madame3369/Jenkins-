@@ -5,12 +5,13 @@ metadata:
   namespace: jenkins
 spec:
   capacity:
-    storage: 10Gi
+    storage: 1Gi
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-storage
   local:
-    path: /home/kim/jenkins_home
+    path: /home/hwicheon/jenkins_home
   nodeAffinity:
     required:
       nodeSelectorTerms:
@@ -30,4 +31,5 @@ spec:
     - ReadWriteMany
   resources:
     requests:
-      storage: 10Gi
+      storage: 1Gi
+  storageClassName: local-storage
